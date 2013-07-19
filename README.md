@@ -1,3 +1,5 @@
-GitHud
+GitHUD
 ======
-_Your GitHub HUD_
+
+_Your GitHub HUD: For projecs, and shit_
+
