@@ -58,17 +58,24 @@
               <li><a href="#">Link</a></li>
               <li><a href="#">Link</a></li>
             </ul>
-          </div><!--/.well -->
-        </div>
-      
+          </div><!--/.well-->
+        </div><!--/span3-->
+
         <!-- Right Col -->
         <div class="span9">
           <div class="row-fluid">
             <table ng-controller="IssueController" class="table-striped">
+              <thead>
+                <th>User</th>
+                <th>#</th>
+                <th>Issue</th>
+                <th>Updated</th>
+                <th>Created</th>
+              </thead>
               <tbody>
                 <tr ng-repeat="issue in issues">
                   <td><a href="{{issue.assignee.url}}">{{issue.assignee.url}}</a></td>
-                  <td><a href="{{issue.url}}">{{issue.number}}</a></td>
+                  <td><a href="{{issue.url}}">#{{issue.number}}</a></td>
                   <td>
                     {{issue.title}}
                     <span ng-repeat="label in issue.labels" style="background-color: #{{color}}">
@@ -80,45 +87,9 @@
                 </tr>
               </tbody>
             </table>
-            
-            
-
-
-            <div class="span4">
-              <h2>Heading</h2>
-              <p>Donec id elit non mi porta gravida at eget metus. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa justo sit amet risus. Etiam porta sem malesuada magna mollis euismod. Donec sed odio dui. </p>
-              <p><a class="btn" href="#">View details »</a></p>
-            </div><!--/span-->
-            <div class="span4">
-              <h2>Heading</h2>
-              <p>Donec id elit non mi porta gravida at eget metus. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa justo sit amet risus. Etiam porta sem malesuada magna mollis euismod. Donec sed odio dui. </p>
-              <p><a class="btn" href="#">View details »</a></p>
-            </div><!--/span-->
-            <div class="span4">
-              <h2>Heading</h2>
-              <p>Donec id elit non mi porta gravida at eget metus. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa justo sit amet risus. Etiam porta sem malesuada magna mollis euismod. Donec sed odio dui. </p>
-              <p><a class="btn" href="#">View details »</a></p>
-            </div><!--/span-->
-          </div><!--/row-->
-          <div class="row-fluid">
-            <div class="span4">
-              <h2>Heading</h2>
-              <p>Donec id elit non mi porta gravida at eget metus. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa justo sit amet risus. Etiam porta sem malesuada magna mollis euismod. Donec sed odio dui. </p>
-              <p><a class="btn" href="#">View details »</a></p>
-            </div><!--/span-->
-            <div class="span4">
-              <h2>Heading</h2>
-              <p>Donec id elit non mi porta gravida at eget metus. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa justo sit amet risus. Etiam porta sem malesuada magna mollis euismod. Donec sed odio dui. </p>
-              <p><a class="btn" href="#">View details »</a></p>
-            </div><!--/span-->
-            <div class="span4">
-              <h2>Heading</h2>
-              <p>Donec id elit non mi porta gravida at eget metus. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa justo sit amet risus. Etiam porta sem malesuada magna mollis euismod. Donec sed odio dui. </p>
-              <p><a class="btn" href="#">View details »</a></p>
-            </div><!--/span-->
-          </div><!--/row-->
-        </div>
-      </div>
+          </div><!--/row-fluid-->
+        </div><!--/span9-->
+      </div><!--/row-fluid-->
     </div><!--/container-fluid-->
 
     <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
